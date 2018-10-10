@@ -487,8 +487,8 @@ pre,
   margin: 20px 0;
   padding: 0;
   font-size: 13px;
-  color: #4d4d4c;
-  background: #f7f7f7;
+  color: #bc4e5b;
+  background: #1d1d1d;
   line-height: 1.6;
 }
 pre,
@@ -508,7 +508,7 @@ pre {
 }
 pre code {
   padding: 0;
-  color: #4d4d4c;
+  color: #bc4e5b;
   background: none;
   text-shadow: none;
 }
@@ -531,7 +531,7 @@ pre code {
 }
 .highlight figcaption {
   font-size: 1em;
-  color: #4d4d4c;
+  color: #bc4e5b;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -545,23 +545,23 @@ pre code {
 }
 .highlight figcaption a {
   float: right;
-  color: #4d4d4c;
+  color: #bc4e5b;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #4d4d4c;
+  border-bottom-color: #bc4e5b;
 }
 .highlight .gutter pre {
   padding-left: 10px;
   padding-right: 10px;
-  color: #869194;
+  color: #999;
   text-align: right;
-  background-color: #eff2f3;
+  background-color: #000;
 }
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #f7f7f7;
+  background-color: #1d1d1d;
 }
 .highlight .line {
   height: 20px;
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0f18ff;
+  background: #accc6c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2903,7 +2903,4 @@ hr {
     width: auto;
     text-align: center;
   }
-}
-code {
-  backgroud: #f00;
 }
