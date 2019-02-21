@@ -231,6 +231,133 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/21/微信小程序调用云函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cherry">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cherry的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/21/微信小程序调用云函数/" itemprop="url">微信小程序调用云函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-21T10:31:03+08:00">
+                2019-02-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="云开发过程调用云函数出错问题"><a href="#云开发过程调用云函数出错问题" class="headerlink" title="云开发过程调用云函数出错问题"></a>云开发过程调用云函数出错问题</h3><h4 id="新建云开发QuickStart项目"><a href="#新建云开发QuickStart项目" class="headerlink" title="新建云开发QuickStart项目"></a>新建云开发QuickStart项目</h4><h5 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">upload score failed Error: errCode: -404011 cloud function execution error | errMsg: cloud.callFunction:fail cloud function service error code -504002, error message Cannot find module &apos;wx-server-sdk&apos;; at cloud.callFunction api;</span><br></pre></td></tr></table></figure>
+<p>错误原因是服务端node.js没有安装所依赖的’wx-server-sdk’模块。此时需要右键打开控制终端，运行命令</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save wx-server-sdk@latest</span><br></pre></td></tr></table></figure>
+<p>此时根据官网右键上传并部署所有文件，编译，再次点击，发现还是会出现错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get openid failed with error Error: errCode: -404011 cloud function execution error | errMsg: cloud.callFunction:fail cloud function service error code -504002, error message Function not found: [login]; at cloud.callFunction api;</span><br></pre></td></tr></table></figure>
+<p>在这一步，真的是卡住了，运行环境也有，依赖也有，还是报错，心累，最后发现初始化时需要直接填写默认环境，wx.cloud.init({env:’test-08f027’});</p>
+<p>注意，此时的默认环境需要写的是环境id</p>
+<p>最终，大功告成，小程序的第一步终于结束。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/07/ES6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2044,7 +2171,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2092,7 +2219,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
